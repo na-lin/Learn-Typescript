@@ -9,3 +9,7 @@ const norma: Chicken = {
   eggsPerWeek: 4,
   name: "norma",
 };
+
+const test = (): void => {
+  console.log("ehh");
+};
