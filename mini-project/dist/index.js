@@ -1,3 +1,3 @@
 "use strict";
-console.log("heelo there yyeee");
-console.log("1st");
+document; // type with Document
+"hello".replaceAll("l", "!");
