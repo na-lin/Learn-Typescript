@@ -1,4 +1,11 @@
 class Player {
+  // staic
+  static description = "player in our game";
+
+  static randomPlayer() {
+    return new Player("anne", "chen");
+  }
+
   // public field,  add value which is hard code to init
   #score = 0;
   numLives = 10;
@@ -53,3 +60,6 @@ console.log(player1.fullName);
 console.log(player1.score);
 player1.score = 12;
 console.log(player1.score);
+
+const ps = Player.randomPlayer();
+console.log(ps);
