@@ -32,9 +32,12 @@ function handleSubmit(e: Event) {
     completed: false,
   };
   todo.push(newTodo);
-  localStorage.setItem("todo", JSON.stringify(todo));
   createTodo(newTodo);
   input.value = "";
+}
+
+function saveTodos() {
+  localStorage.setItem("todo", JSON.stringify(todo));
 }
 
 function createTodo(todo: Todo) {
@@ -45,6 +48,11 @@ function createTodo(todo: Todo) {
   // checkbox
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
+  checkBox.checked = todo.completed;
+  checkBox.addEventListener("change", function () {
+    todo.completed = checkBox.checked;
+    saveTodos();
+  });
   newLI.append(checkBox);
 
   // append to ul
