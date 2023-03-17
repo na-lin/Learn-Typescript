@@ -39,6 +39,15 @@ class Player {
         this._score = newScore;
     }
 }
+class SuperPlayer extends Player {
+    constructor() {
+        super(...arguments);
+        this.isAdmin = true;
+    }
+    maxScore() {
+        this._score = 9999;
+    }
+}
 const player1 = new Player("john", "excel");
 console.log(player1);
 console.log(player1.fullName);
