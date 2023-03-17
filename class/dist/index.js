@@ -53,6 +53,13 @@ class Player {
   }
 }
 
+class AdminPlayer extends Player {
+  constructor(first, last, power) {
+    super(first, last);
+    this.power = power;
+  }
+}
+
 const player1 = new Player("x", "y");
 // console.log(player1.#score);
 console.log(player1.getScore());
@@ -63,3 +70,6 @@ console.log(player1.score);
 
 const ps = Player.randomPlayer();
 console.log(ps);
+
+const admin1 = new AdminPlayer("a", "v", [12]);
+console.log(admin1);
