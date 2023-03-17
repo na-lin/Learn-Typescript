@@ -52,3 +52,19 @@ const player1 = new Player("john", "excel");
 console.log(player1);
 console.log(player1.fullName);
 player1.fullName = "12";
+class Bike {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Jacket {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+    printful() {
+        console.log(this.color);
+    }
+}
+const bike1 = new Bike("blue");
+const jacket1 = new Jacket("Pade", "red");
