@@ -3,23 +3,57 @@ const input = document.getElementById("todoInput") as HTMLInputElement;
 const form = document.querySelector("#todoform")!;
 const todoList = document.getElementById("todolist");
 
-// btn?.addEventListener("click", () => {
-//   console.log("click");
-//   console.log(input.value);
-// });
+interface Todo {
+  text: string;
+  completed: boolean;
+}
+
+const todo: Todo[] = readTodo();
+initTodos();
+
+function readTodo(): Todo[] {
+  const todos = localStorage.getItem("todo");
+  if (todos === null) return [];
+  return JSON.parse(todos);
+}
+
+function initTodos() {
+  todo.forEach((todo) => {
+    createTodo(todo);
+  });
+}
 
 function handleSubmit(e: Event) {
   e.preventDefault();
-  const newTodoText = input.value;
+
+  // save todo to localStorage
+  const newTodo: Todo = {
+    text: input.value,
+    completed: false,
+  };
+  todo.push(newTodo);
+  localStorage.setItem("todo", JSON.stringify(todo));
+  createTodo(newTodo);
+  input.value = "";
+}
+
+function createTodo(todo: Todo) {
+  // create todo li
   const newLI = document.createElement("li");
-  newLI.textContent = newTodoText;
+  newLI.textContent = todo.text;
 
   // checkbox
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
   newLI.append(checkBox);
+
+  // append to ul
   todoList?.append(newLI);
-  input.value = "";
 }
 
 form.addEventListener("submit", handleSubmit);
+
+// btn?.addEventListener("click", () => {
+//   console.log("click");
+//   console.log(input.value);
+// });
