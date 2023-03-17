@@ -79,3 +79,17 @@ class Jacket implements Colorful, Printable {
 
 const bike1 = new Bike("blue");
 const jacket1 = new Jacket("Pade", "red");
+
+abstract class Employee {
+  constructor(public first: string, public last: string) {}
+  abstract getPay(): number;
+}
+
+class FulltimeEmployee extends Employee {
+  constructor(first: string, last: string, public salary: number) {
+    super(first, last);
+  }
+  getPay(): number {
+    return this.salary;
+  }
+}

@@ -68,3 +68,18 @@ class Jacket {
 }
 const bike1 = new Bike("blue");
 const jacket1 = new Jacket("Pade", "red");
+class Employee {
+    constructor(first, last) {
+        this.first = first;
+        this.last = last;
+    }
+}
+class FulltimeEmployee extends Employee {
+    constructor(first, last, salary) {
+        super(first, last);
+        this.salary = salary;
+    }
+    getPay() {
+        return this.salary;
+    }
+}
