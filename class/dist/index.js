@@ -17,14 +17,29 @@
 // }
 class Player {
     // private score: number = 0;
-    constructor(first, last, score = 0) {
+    constructor(first, last, _score = 0) {
         this.first = first;
         this.last = last;
-        this.score = score;
+        this._score = _score;
     }
     secret() {
         console.log("secret");
     }
+    // default is read-only
+    get fullName() {
+        return `${this.first} ${this.last}`;
+    }
+    get score() {
+        return this._score;
+    }
+    set score(newScore) {
+        if (newScore < 0) {
+            throw new Error("score > 0");
+        }
+        this._score = newScore;
+    }
 }
 const player1 = new Player("john", "excel");
 console.log(player1);
+console.log(player1.fullName);
+player1.fullName = "12";

@@ -23,13 +23,30 @@ class Player {
   constructor(
     public first: string,
     public last: string,
-    private score: number = 0
+    private _score: number = 0
   ) {}
 
   private secret(): void {
     console.log("secret");
   }
+
+  // default is read-only
+  get fullName(): string {
+    return `${this.first} ${this.last}`;
+  }
+
+  get score(): number {
+    return this._score;
+  }
+  set score(newScore) {
+    if (newScore < 0) {
+      throw new Error("score > 0");
+    }
+    this._score = newScore;
+  }
 }
 
 const player1 = new Player("john", "excel");
 console.log(player1);
+console.log(player1.fullName);
+player1.fullName = "12";
