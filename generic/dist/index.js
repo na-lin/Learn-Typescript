@@ -7,3 +7,18 @@ const inputEl = document.querySelector("#username");
 inputEl.value = "Hacked!";
 console.log(inputEl);
 const btn = document.querySelector(".btn");
+function numberIdentity(item) {
+    return item;
+}
+function stringIdentity(item) {
+    return item;
+}
+// no relationship between input and output
+function badIdentity(item) {
+    return item;
+}
+// Generic,
+function identity(item) {
+    return item;
+}
+const result = identity(1);

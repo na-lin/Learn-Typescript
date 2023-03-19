@@ -8,3 +8,21 @@ inputEl.value = "Hacked!";
 console.log(inputEl);
 
 const btn = document.querySelector<HTMLButtonElement>(".btn");
+
+function numberIdentity(item: number): number {
+  return item;
+}
+function stringIdentity(item: string): string {
+  return item;
+}
+
+// no relationship between input and output
+function badIdentity(item: any): any {
+  return item;
+}
+
+// Generic,
+function identity<Type>(item: Type): Type {
+  return item;
+}
+const result = identity<number>(1);
