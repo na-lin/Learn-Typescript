@@ -22,3 +22,8 @@ function identity(item) {
     return item;
 }
 const result = identity(1);
+function getRandomElement(list) {
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+}
+getRandomElement([1, 2]);

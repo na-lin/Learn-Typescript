@@ -26,3 +26,10 @@ function identity<T>(item: T): T {
   return item;
 }
 const result = identity<number>(1);
+
+function getRandomElement<T>(list: T[]): T {
+  const randomIndex = Math.floor(Math.random() * list.length);
+  return list[randomIndex];
+}
+
+getRandomElement([1, 2]);
