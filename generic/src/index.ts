@@ -33,3 +33,12 @@ function getRandomElement<T>(list: T[]): T {
 }
 
 getRandomElement([1, 2]);
+
+function merge<T, U>(obj1: T, obj2: U) {
+  return {
+    ...obj1,
+    ...obj2,
+  };
+}
+
+const comboObj = merge({ name: "john" }, { pets: ["blue", "colt"] });

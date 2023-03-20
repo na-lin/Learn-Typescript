@@ -27,3 +27,7 @@ function getRandomElement(list) {
     return list[randomIndex];
 }
 getRandomElement([1, 2]);
+function merge(obj1, obj2) {
+    return Object.assign(Object.assign({}, obj1), obj2);
+}
+const comboObj = merge({ name: "john" }, { pets: ["blue", "colt"] });
