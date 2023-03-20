@@ -22,7 +22,7 @@ function badIdentity(item: any): any {
 }
 
 // Generic,
-function identity<Type>(item: Type): Type {
+function identity<T>(item: T): T {
   return item;
 }
 const result = identity<number>(1);
