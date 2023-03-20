@@ -15,3 +15,16 @@ function printLetter(word?: string) {
     console.log("You don't provide a word");
   }
 }
+
+const someFunc = (x: string | boolean, y: string | number) => {
+  if (x === "3") {
+    console.log(x);
+  }
+  if (x === y) {
+    x.toUpperCase();
+    y.toUpperCase();
+  } else {
+    console.log(x);
+    console.log(y);
+  }
+};
