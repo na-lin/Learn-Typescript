@@ -30,19 +30,19 @@ const someFunc = (x: string | boolean, y: string | number) => {
 };
 
 // in operator
-interface Cat {
-  meow: () => void;
-}
-interface Dog {
-  bark: () => void;
-}
-const talk = (creature: Cat | Dog) => {
-  if ("meow" in creature) {
-    console.log(creature.meow());
-  } else {
-    console.log(creature.bark());
-  }
-};
+// type Cat = {
+//   meow: () => void;
+// };
+// type Dog = {
+//   bark: () => void;
+// };
+// const talk = (creature: Cat | Dog) => {
+//   if ("meow" in creature) {
+//     console.log(creature.meow());
+//   } else {
+//     console.log(creature.bark());
+//   }
+// };
 
 // instandof
 function printFullDate(date: string | Date) {
@@ -64,5 +64,27 @@ function printName(entity: User | Company) {
     console.log(entity);
   } else {
     console.log(entity);
+  }
+}
+
+// type predicates
+interface Cat {
+  name: string;
+  numsLives: number;
+}
+interface Dog {
+  name: string;
+  breed: string;
+}
+function isCat(animal: Cat | Dog): animal is Cat {
+  return (animal as Cat).numsLives !== undefined;
+}
+function makeNoise(animal: Cat | Dog): string {
+  if (isCat(animal)) {
+    animal;
+    return "meow";
+  } else {
+    animal;
+    return "bark";
   }
 }
