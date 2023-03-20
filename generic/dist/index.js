@@ -41,3 +41,13 @@ function makeEmptyArray() {
     return [];
 }
 const emptyNums = makeEmptyArray();
+class Playlist {
+    constructor() {
+        this.queue = [];
+    }
+    add(el) {
+        this.queue.push(el);
+    }
+}
+const songs = new Playlist();
+songs.add({ title: "a", songer: "b" });

@@ -58,3 +58,22 @@ function makeEmptyArray<T = number>(): T[] {
   return [];
 }
 const emptyNums = makeEmptyArray();
+
+interface Video {
+  title: string;
+  creator: string;
+}
+interface Song {
+  title: string;
+  songer: string;
+}
+
+class Playlist<T> {
+  public queue: T[] = [];
+  add(el: T) {
+    this.queue.push(el);
+  }
+}
+
+const songs = new Playlist<Song>();
+songs.add({ title: "a", songer: "b" });
