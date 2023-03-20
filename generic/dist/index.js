@@ -37,3 +37,7 @@ function printDoubleLength(thing) {
 }
 printDoubleLength("123");
 const x = printDoubleLength(1);
+function makeEmptyArray() {
+    return [];
+}
+const emptyNums = makeEmptyArray();

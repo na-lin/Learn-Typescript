@@ -53,3 +53,8 @@ function printDoubleLength<T extends Lengthy>(thing: T): number {
 
 printDoubleLength("123");
 const x = printDoubleLength(1);
+
+function makeEmptyArray<T = number>(): T[] {
+  return [];
+}
+const emptyNums = makeEmptyArray();
