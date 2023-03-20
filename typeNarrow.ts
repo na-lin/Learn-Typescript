@@ -43,3 +43,26 @@ const talk = (creature: Cat | Dog) => {
     console.log(creature.bark());
   }
 };
+
+// instandof
+function printFullDate(date: string | Date) {
+  if (date instanceof Date) {
+    console.log(date.toUTCString());
+  } else {
+    console.log(new Date(date).toUTCString());
+  }
+}
+
+class User {
+  constructor(public username: string) {}
+}
+class Company {
+  constructor(public name: string) {}
+}
+function printName(entity: User | Company) {
+  if (entity instanceof User) {
+    console.log(entity);
+  } else {
+    console.log(entity);
+  }
+}
