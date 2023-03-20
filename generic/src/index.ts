@@ -34,7 +34,7 @@ function getRandomElement<T>(list: T[]): T {
 
 getRandomElement([1, 2]);
 
-function merge<T, U>(obj1: T, obj2: U) {
+function merge<T extends object, U extends object>(obj1: T, obj2: U) {
   return {
     ...obj1,
     ...obj2,
@@ -42,3 +42,14 @@ function merge<T, U>(obj1: T, obj2: U) {
 }
 
 const comboObj = merge({ name: "john" }, { pets: ["blue", "colt"] });
+merge({ name: "john" }, 0);
+
+interface Lengthy {
+  length: number;
+}
+function printDoubleLength<T extends Lengthy>(thing: T): number {
+  return thing.length * 2;
+}
+
+printDoubleLength("123");
+const x = printDoubleLength(1);

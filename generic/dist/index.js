@@ -31,3 +31,9 @@ function merge(obj1, obj2) {
     return Object.assign(Object.assign({}, obj1), obj2);
 }
 const comboObj = merge({ name: "john" }, { pets: ["blue", "colt"] });
+merge({ name: "john" }, 0);
+function printDoubleLength(thing) {
+    return thing.length * 2;
+}
+printDoubleLength("123");
+const x = printDoubleLength(1);
