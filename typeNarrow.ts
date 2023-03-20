@@ -28,3 +28,18 @@ const someFunc = (x: string | boolean, y: string | number) => {
     console.log(y);
   }
 };
+
+// in operator
+interface Cat {
+  meow: () => void;
+}
+interface Dog {
+  bark: () => void;
+}
+const talk = (creature: Cat | Dog) => {
+  if ("meow" in creature) {
+    console.log(creature.meow());
+  } else {
+    console.log(creature.bark());
+  }
+};
