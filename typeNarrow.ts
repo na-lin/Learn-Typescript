@@ -108,7 +108,13 @@ interface Pig {
   weight: number;
   age: number;
 }
-type FarmAnimal = Pig | Rooster | Cow;
+interface Sheep {
+  kind: "sheep";
+  name: string;
+  weight: number;
+  age: number;
+}
+type FarmAnimal = Pig | Rooster | Cow | Sheep;
 function getFarmAnimal(animal: FarmAnimal) {
   switch (animal.kind) {
     case "pig":
@@ -118,6 +124,10 @@ function getFarmAnimal(animal: FarmAnimal) {
       return "Mooo";
     case "rooster":
       return "Cock";
+    default:
+      // we should never make it here, if we handled all cases correctly
+      const _exhaustiveCheck: never = animal;
+      return _exhaustiveCheck;
   }
 }
 
