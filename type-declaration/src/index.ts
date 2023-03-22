@@ -40,3 +40,6 @@ function printPost(post: Post) {
   console.log(post.title);
   console.log(post.body);
 }
+
+// install type separately
+import _ from "lodash"; // Could not find a declaration file for module 'lodash'.
