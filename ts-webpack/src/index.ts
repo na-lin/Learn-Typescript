@@ -11,7 +11,3 @@ console.log(multiply(4, 5));
 console.log(divide(4, 5));
 
 const buffy = new ShelterDog("Buffy", "Pitbull", 5, "Desert Springs Shelter");
-
-const b = { a: 1 };
-const c = { ...b };
-console.log(c);
