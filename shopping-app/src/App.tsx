@@ -3,19 +3,17 @@ import Greeter from "./components/Greeter";
 import ShoppingList from "./components/ShoppingList";
 import ShoppingListForm from "./components/ShoppingListForm";
 import "./App.css";
+import { v4 as getId } from "uuid";
 
 // models
 import Item from "./models/item";
 
 function App() {
   const [items, setItems] = useState<Item[]>([]);
-  const addItem = (product: string) => {
-    console.log(product);
+  const addItem = (product: string, quantity: number) => {
+    setItems([...items, { id: getId(), product, quantity }]);
   };
-  // const items = [
-  //   { id: 1, product: "lemon", quantity: 3 },
-  //   { id: 2, product: "apply", quantity: 10 },
-  // ];
+
   return (
     <div>
       <ShoppingList items={items} />
