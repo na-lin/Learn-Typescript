@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -16,7 +8,21 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Dog)\n/* harmony export */ });\nclass Dog {\n    constructor(name, breed, age) {\n        this.name = name;\n        this.breed = breed;\n        this.age = age;\n    }\n    bark() {\n        console.log(\"Wofff\");\n    }\n}\n\n\n//# sourceURL=webpack://ts-webpack/./src/Dog.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Dog)
+/* harmony export */ });
+class Dog {
+    constructor(name, breed, age) {
+        this.name = name;
+        this.breed = breed;
+        this.age = age;
+    }
+    bark() {
+        console.log("Wofff");
+    }
+}
+
 
 /***/ }),
 
@@ -26,17 +32,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ShelterDog)\n/* harmony export */ });\n/* harmony import */ var _Dog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dog */ \"./src/Dog.ts\");\n\nclass ShelterDog extends _Dog__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n    constructor(name, breed, age, shelter) {\n        super(name, breed, age);\n        this.shelter = shelter;\n    }\n}\n\n\n//# sourceURL=webpack://ts-webpack/./src/ShelterDog.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ShelterDog)
+/* harmony export */ });
+/* harmony import */ var _Dog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dog */ "./src/Dog.ts");
 
-/***/ }),
+class ShelterDog extends _Dog__WEBPACK_IMPORTED_MODULE_0__["default"] {
+    constructor(name, breed, age, shelter) {
+        super(name, breed, age);
+        this.shelter = shelter;
+    }
+}
 
-/***/ "./src/index.ts":
-/*!**********************!*\
-  !*** ./src/index.ts ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Dog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dog */ \"./src/Dog.ts\");\n/* harmony import */ var _ShelterDog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShelterDog */ \"./src/ShelterDog.ts\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\n\n\nconsole.log(\"FROM INDEX FILE!!!!!!!!\");\nconst elton = new _Dog__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"Elton\", \"Aussie\", 0.5);\nelton.bark();\nconsole.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.add)(4, 5));\nconsole.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.multiply)(4, 5));\nconsole.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.divide)(4, 5));\nconst buffy = new _ShelterDog__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\"Buffy\", \"Pitbull\", 5, \"Desert Springs Shelter\");\n\n\n//# sourceURL=webpack://ts-webpack/./src/index.ts?");
 
 /***/ }),
 
@@ -46,7 +54,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Dog
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"add\": () => (/* binding */ add),\n/* harmony export */   \"divide\": () => (/* binding */ divide),\n/* harmony export */   \"multiply\": () => (/* binding */ multiply)\n/* harmony export */ });\nfunction add(x, y) {\n    return x + y;\n}\nfunction multiply(x, y) {\n    return x * y;\n}\nfunction divide(x, y) {\n    return x / y;\n}\n\n\n//# sourceURL=webpack://ts-webpack/./src/utils.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "add": () => (/* binding */ add),
+/* harmony export */   "divide": () => (/* binding */ divide),
+/* harmony export */   "multiply": () => (/* binding */ multiply)
+/* harmony export */ });
+function add(x, y) {
+    return x + y;
+}
+function multiply(x, y) {
+    return x * y;
+}
+function divide(x, y) {
+    return x / y;
+}
+
 
 /***/ })
 
@@ -106,11 +129,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Dog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dog */ "./src/Dog.ts");
+/* harmony import */ var _ShelterDog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShelterDog */ "./src/ShelterDog.ts");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils */ "./src/utils.ts");
+
+
+
+console.log("FROM INDEX FILE!!!!!!!!");
+const elton = new _Dog__WEBPACK_IMPORTED_MODULE_0__["default"]("Elton", "Aussie", 0.5);
+elton.bark();
+console.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.add)(4, 5));
+console.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.multiply)(4, 5));
+console.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.divide)(4, 5));
+const buffy = new _ShelterDog__WEBPACK_IMPORTED_MODULE_1__["default"]("Buffy", "Pitbull", 5, "Desert Springs Shelter");
+
+})();
+
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map
