@@ -16,7 +16,9 @@ function App() {
 
   return (
     <div>
-      <ShoppingList items={items} />
+      <ShoppingList items={items}>
+        <p>Children</p>
+      </ShoppingList>
       <ShoppingListForm onAddItem={addItem} />
     </div>
   );
