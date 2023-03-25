@@ -142,7 +142,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-console.log("FROM INDEX FILE!!!!!!!!");
+console.log("FROM INDEX FILE!!!!");
 const elton = new _Dog__WEBPACK_IMPORTED_MODULE_0__["default"]("Elton", "Aussie", 0.5);
 elton.bark();
 console.log((0,_utils__WEBPACK_IMPORTED_MODULE_2__.add)(4, 5));
@@ -154,4 +154,4 @@ const buffy = new _ShelterDog__WEBPACK_IMPORTED_MODULE_1__["default"]("Buffy", "
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=d2205b90ca85b9715be7.bundle.js.map

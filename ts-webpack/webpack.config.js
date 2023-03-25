@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 module.exports = {
   mode: "development",
@@ -5,7 +6,7 @@ module.exports = {
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
   output: {
-    filename: "bundle.js",
+    filename: "[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -20,4 +21,5 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", "js"],
   },
+  plugins: [new CleanWebpackPlugin()],
 };
