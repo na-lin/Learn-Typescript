@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
+import Greeter from "./components/Greeter";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello typescript</h1>
+      <Greeter person="Colt" />
     </div>
   );
 }
